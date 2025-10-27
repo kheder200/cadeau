@@ -94,7 +94,7 @@ const Quiz = ({ onQuizComplete }: QuizProps) => {
           The Interactive Gift Challenge
         </h2>
         <p className="font-body text-lg text-muted-foreground">
-          Answer these questions correctly to unlock your final gift
+        Hey Ayoosh 💛 Answer these questions correctly and I’ve got something special to tell you at the end 
         </p>
       </div>
 
