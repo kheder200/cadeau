@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Soft, romantic background */
+    --background: 350 70% 98%;
+    --foreground: 330 50% 20%;
+
+    /* Card styling with pink tones */
+    --card: 0 0% 100%;
+    --card-foreground: 330 50% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 50% 20%;
+
+    /* Vibrant magenta as primary */
+    --primary: 330 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft blush pink as secondary */
+    --secondary: 350 70% 90%;
+    --secondary-foreground: 330 50% 20%;
+
+    /* Rose gold accent */
+    --accent: 20 60% 70%;
+    --accent-foreground: 330 50% 20%;
+
+    --muted: 350 40% 95%;
+    --muted-foreground: 330 30% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 350 40% 90%;
+    --input: 350 40% 95%;
+    --ring: 330 70% 60%;
+
+    --radius: 1rem;
+    
+    /* Custom design tokens for birthday theme */
+    --blush-pink: 350 70% 90%;
+    --vibrant-magenta: 330 70% 60%;
+    --rose-gold: 20 60% 70%;
+    --soft-white: 0 0% 100%;
+    --light-grey: 0 0% 97%;
+    
+    /* Gradients */
+    --gradient-romantic: linear-gradient(135deg, hsl(350 70% 90%), hsl(330 70% 60%));
+    --gradient-soft: linear-gradient(180deg, hsl(350 70% 98%), hsl(0 0% 100%));
+    
+    /* Shadows */
+    --shadow-card: 0 10px 40px -10px hsl(330 70% 60% / 0.2);
+    --shadow-glow: 0 0 30px hsl(350 70% 90% / 0.5);
+    
+    /* Font families */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Animation */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  
+  /* Floating hearts background effect */
+  .floating-hearts-bg::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background-image: 
+      radial-gradient(circle at 10% 20%, hsl(var(--rose-gold) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(var(--blush-pink) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, hsl(var(--rose-gold) / 0.1) 0%, transparent 50%);
+  }
+  
+  @keyframes float-up {
+    0% {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  .floating-heart {
+    position: fixed;
+    color: hsl(var(--rose-gold) / 0.3);
+    animation: float-up linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .floating-heart:nth-child(1) { left: 5%; animation-duration: 15s; animation-delay: 0s; font-size: 20px; }
+  .floating-heart:nth-child(2) { left: 15%; animation-duration: 18s; animation-delay: 2s; font-size: 24px; }
+  .floating-heart:nth-child(3) { left: 25%; animation-duration: 20s; animation-delay: 4s; font-size: 18px; }
+  .floating-heart:nth-child(4) { left: 35%; animation-duration: 16s; animation-delay: 1s; font-size: 22px; }
+  .floating-heart:nth-child(5) { left: 45%; animation-duration: 19s; animation-delay: 3s; font-size: 20px; }
+  .floating-heart:nth-child(6) { left: 55%; animation-duration: 17s; animation-delay: 5s; font-size: 24px; }
+  .floating-heart:nth-child(7) { left: 65%; animation-duration: 21s; animation-delay: 2s; font-size: 18px; }
+  .floating-heart:nth-child(8) { left: 75%; animation-duration: 18s; animation-delay: 4s; font-size: 22px; }
+  .floating-heart:nth-child(9) { left: 85%; animation-duration: 16s; animation-delay: 1s; font-size: 20px; }
+  .floating-heart:nth-child(10) { left: 95%; animation-duration: 19s; animation-delay: 3s; font-size: 24px; }
+  .floating-heart:nth-child(11) { left: 12%; animation-duration: 20s; animation-delay: 6s; font-size: 18px; }
+  .floating-heart:nth-child(12) { left: 30%; animation-duration: 17s; animation-delay: 2s; font-size: 22px; }
+  .floating-heart:nth-child(13) { left: 50%; animation-duration: 18s; animation-delay: 4s; font-size: 20px; }
+  .floating-heart:nth-child(14) { left: 70%; animation-duration: 19s; animation-delay: 1s; font-size: 24px; }
+  .floating-heart:nth-child(15) { left: 90%; animation-duration: 16s; animation-delay: 5s; font-size: 18px; }
+}
