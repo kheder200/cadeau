@@ -46,12 +46,12 @@ const Index = () => {
 
           {/* Main Headline */}
           <h1 className="font-heading text-6xl md:text-8xl font-bold text-primary mb-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            Happy Birthday, Aya! <Heart className="inline-block animate-pulse-heart text-primary" />
+            Happy Birthday, Ayooosh! <Heart className="inline-block animate-pulse-heart text-primary" />
           </h1>
 
           {/* Sub-headline */}
           <p className="font-body text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-fade-in leading-relaxed" style={{ animationDelay: '0.5s' }}>
-            This page is a small reflection of the beautiful soul you are.
+            Ayooooosh this page is a small reflection of the beautiful soul you are .
           </p>
 
           {/* CTA Button */}
@@ -101,7 +101,7 @@ const Index = () => {
                   style={{ animationDelay: '0.6s' }}
                 />
                 <h2 className="font-heading text-5xl md:text-7xl font-bold text-primary mb-8 animate-fade-in">
-                  Gift Unlocked! 🎁
+                  Ayooosh 🎁
                 </h2>
               </div>
             </div>
@@ -112,7 +112,7 @@ const Index = () => {
             />
             
             <p className="font-heading text-3xl md:text-4xl text-foreground mb-8 leading-relaxed italic animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              "May this year bring you the deepest joys, the wildest adventures, and all the love you deserve."
+              "I just hope this year gives me more chances to be with you. If I could stay by your side forever, I would."
             </p>
 
             <div className="mt-12 pt-8 border-t-2 border-secondary animate-fade-in" style={{ animationDelay: '0.5s' }}>
@@ -120,7 +120,7 @@ const Index = () => {
                 With all my love,
               </p>
               <p className="font-heading text-3xl text-primary mt-2">
-                Your Friend ❤️
+                Your Friend Kheder ❤️
               </p>
             </div>
           </div>
