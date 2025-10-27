@@ -18,12 +18,12 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    question: "What part of you do I think shines the brightest?",
+    question: "What do I love most about you?",
     options: [
       { label: "A. The look in your eyes.", value: "A" },
-      { label: "B. The way you talk.", value: "B" },
+      { label: "B. The way you talk .", value: "B" },
       { label: "C. Your personality.", value: "C" },
-      { label: "D. All of the above.", value: "D" },
+      { label: "D. Honestly? Everything about you.", value: "D" },
     ],
     correctAnswer: "D",
   },
@@ -34,7 +34,7 @@ const questions: Question[] = [
       { label: "A. A little, I hope you were feeling better soon.", value: "A" },
       { label: "B. I couldn't stop thinking about you and wishing, I’d take your pain if I could—just to see you smile again.", value: "B" },
       { label: "C. SomeWhat—I thought about you every time I took a breath .", value: "C" },
-      { label: "D. Zero—I was busy playing video games (I know, I know).", value: "D" },
+      { label: "D. Zero—I was busy playing video games (I know, I know ^-^).", value: "D" },
     ],
     correctAnswer: "B",
   },
