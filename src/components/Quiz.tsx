@@ -32,9 +32,9 @@ const questions: Question[] = [
     question: "When you were last feeling sick, how much do you think I was thinking about you?",
     options: [
       { label: "A. A little, I hope you were feeling better soon.", value: "A" },
-      { label: "B. A lot—I was hoping I could make you soup or bring you medicine.", value: "B" },
-      { label: "C. Constantly—I couldn't stop thinking about you and wishing I could take your pain away.", value: "C" },
-      { label: "D. Zero—I was busy playing video games.", value: "D" },
+      { label: "B. I couldn't stop thinking about you and wishing, I’d take your pain if I could—just to see you smile again.", value: "B" },
+      { label: "C. SomeWhat—I thought about you every time I took a breath .", value: "C" },
+      { label: "D. Zero—I was busy playing video games (I know, I know).", value: "D" },
     ],
     correctAnswer: "B",
   },
