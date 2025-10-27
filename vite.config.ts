@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   // Set base to your repo name if using username.github.io/repo-name 
-  //
+  //1
   // If using custom domain or username.github.io, keep base as '/'
   base: '/cadeau/',
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
