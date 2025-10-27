@@ -91,10 +91,10 @@ const Quiz = ({ onQuizComplete }: QuizProps) => {
     <div className="max-w-4xl mx-auto animate-fade-in">
       <div className="text-center mb-12">
         <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">
-          The Interactive Gift Challenge
+          Hey Ayoosh 💛 
         </h2>
         <p className="font-body text-lg text-muted-foreground">
-        Hey Ayoosh 💛 Answer these questions correctly and I’ve got something special to tell you at the end 
+        Answer these questions correctly and I’ve got something special to tell you at the end 
         </p>
       </div>
 
