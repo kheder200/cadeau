@@ -18,9 +18,9 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    question: "What do I love most about you?",
+    question: "What do you think I love most about you?",
     options: [
-      { label: "A. The look in your eyes.", value: "A" },
+      { label: "A. The way you ignore me in messenger", value: "A" },
       { label: "B. The way you talk .", value: "B" },
       { label: "C. Your personality.", value: "C" },
       { label: "D. Honestly? Everything about you.", value: "D" },
